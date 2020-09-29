@@ -1,11 +1,14 @@
 {
+  "homepage": "http://irfannazeer.github.io/reactcart",
   "name": "react-shopping-cart",
   "version": "0.1.0",
   "description": "Simple react shopping cart without using redux",
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "NODE_ENV=production webpack --config=config/webpack.prod.js"
+    "build": "NODE_ENV=production webpack --config=config/webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "reactjs",
@@ -34,6 +37,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.14.1",
