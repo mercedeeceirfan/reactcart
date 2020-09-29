@@ -1,6 +1,6 @@
 # React Shopping Cart
 
-Simple React Shopping Cart without using Redux
+Simple React Shopping Cart 
 
  
 ## Live Demo
