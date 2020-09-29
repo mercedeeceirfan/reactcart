@@ -22,7 +22,7 @@ class CartScrollBar extends Component {
   }
   render() {
     return (
-      <Scrollbars style={{ width: 360, height: 320 }} ref="scrollbars">
+      <Scrollbars style={{ width: 418, height: 320 }} ref="scrollbars">
         {this.props.children}
       </Scrollbars>
     );
