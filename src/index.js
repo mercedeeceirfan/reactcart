@@ -6,7 +6,8 @@ import Products from "./components/Products";
 import Footer from "./components/Footer";
 import QuickView from "./components/QuickView";
 import "./scss/style.scss";
-
+ import {productData} from "./../products";
+ 
 class App extends Component {
   constructor() {
     super();
@@ -36,19 +37,26 @@ class App extends Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+
   }
   // Fetch Initial Set of Products from external API
   getProducts() {
-    let url =
-      "https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json";
-    axios.get(url).then(response => {
+
+    /*  let url = "https://res.cloudinary.com/sadss/raw/upload/v1535817394/json/products.json"; */ 
+    /* axios.get("./../products.json").then(response => {
       this.setState({
         products: response.data
       });
-    });
+    }); */
+    let data = productData.items;
+     if(data) {
+      this.setState({
+        products: data
+      });
+    }
   }
-  componentWillMount() {
-    this.getProducts();
+  componentDidMount() {
+     this.getProducts();
   }
 
   // Search by Keyword

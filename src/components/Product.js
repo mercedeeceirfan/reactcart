@@ -77,7 +77,10 @@ class Product extends Component {
           />
         </div>
         <h4 className="product-name">{this.props.name}</h4>
-        <p className="product-price">{this.props.price}</p>
+        <p className="real-price">price: {this.props.price} </p>
+        <span className="discount-price" >({this.props.discount} % off)</span>
+        <p className="product-price" >{this.props.realprice}</p>
+
         <Counter
           productQuantity={quantity}
           updateQuantity={this.props.updateQuantity}

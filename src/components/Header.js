@@ -165,12 +165,8 @@ class Header extends Component {
     return (
       <header>
         <div className="container">
-          <div className="brand">
-            <img
-              className="logo"
-              src="https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png"
-              alt="Veggy Brand Logo"
-            />
+          <div className="brand"> 
+            <label className="logo">Smart Electronics</label>
           </div>
 
           <div className="search">

@@ -13,18 +13,18 @@ class Products extends Component {
     let term = this.props.searchTerm;
     let x;
 
-    function searchingFor(term) {
+    /* function searchingFor(term) {
       return function(x) {
         return x.name.toLowerCase().includes(term.toLowerCase()) || !term;
       };
-    }
-    productsData = this.props.productsList
-      .filter(searchingFor(term))
-      .map(product => {
+    } */
+    productsData = this.props.productsList.map(product => {
         return (
           <Product
             key={product.id}
-            price={product.price}
+            price={product.price.display}
+            realprice={product.price.actual}
+            discount={product.discount}
             name={product.name}
             image={product.image}
             id={product.id}
